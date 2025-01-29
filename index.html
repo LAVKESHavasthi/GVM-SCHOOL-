@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2P File Sharing (No Backend)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>P2P File Transfer</h1>
+
+    <div id="send-section">
+        <h2>Send File</h2>
+        <input type="file" id="fileInput">
+        <button id="generateOffer">Generate Code</button>
+        <textarea id="offerText" readonly></textarea>
+        <button onclick="copyOffer()">Copy Code</button>
+    </div>
+
+    <div id="receive-section">
+        <h2>Receive File</h2>
+        <textarea id="answerText" placeholder="Paste Code Here"></textarea>
+        <button onclick="connectPeer()">Connect</button>
+    </div>
+
+    <p id="status" style="color: green;"></p>
+
+    <div id="download-container" style="display: none;">
+        <p>File Received! Click below to download:</p>
+        <a id="downloadLink" download>Download File</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
